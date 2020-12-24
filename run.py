@@ -19,9 +19,7 @@ env.read_env()
 
 
 def get_intent_text(project_id: str, session_id: str, text: str, language_code: str) -> str:
-    """
-    Returns the result of detect intent with texts as inputs.
-    """
+    """Returns the result of detect intent with texts as inputs."""
     session_client = dialogflow.SessionsClient()
     session = session_client.session_path(project_id, session_id)
     logger.info(f'Session {session_id} with language code {language_code}')
@@ -31,10 +29,8 @@ def get_intent_text(project_id: str, session_id: str, text: str, language_code: 
     response = session_client.detect_intent(request={'session': session, 'query_input': query_input})
 
     logger.info(f'Query text: {response.query_result.query_text}')
-    logger.info(
-        f'Detected intent: {response.query_result.intent.display_name} '
-        f'(Confidence: {response.query_result.intent_detection_confidence})'
-    )
+    logger.info(f'Detected intent: {response.query_result.intent.display_name} ')
+    logger.info(f'(Confidence: {response.query_result.intent_detection_confidence})')
     logger.info(f'Fulfillment text: {response.query_result.fulfillment_text}\n')
 
     return response.query_result.fulfillment_text
