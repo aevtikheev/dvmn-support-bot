@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 .idea/
+
+google_app_credentials.json
