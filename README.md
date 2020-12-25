@@ -7,4 +7,3 @@
 
 ## Запуск:
 > python run.py
-

@@ -1,4 +1,4 @@
-# Dear Devman reviewer! Sorry, but I am not gonna use outdated 11.1.0
 python-telegram-bot==13.1
 environs==9.2.0
 google-cloud-dialogflow==2.0.0
+dataclasses-json==0.5.2
