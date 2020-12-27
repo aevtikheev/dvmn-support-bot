@@ -3,7 +3,8 @@ import logging
 import random
 
 import vk_api
-from vk_api.longpoll import VkLongPoll, VkEventType
+from vk_api.longpoll import VkLongPoll, VkEventType, Event
+from vk_api.vk_api import VkApiMethod
 from environs import Env
 
 import dialogflow
@@ -20,7 +21,8 @@ env = Env()
 env.read_env()
 
 
-def reply_from_dialogflow(event, api):
+def reply_from_dialogflow(event: Event, api: VkApiMethod) -> None:
+    """Send answer for a detected event. Do nothing if intent was not detected."""
     response = dialogflow.get_response(
             session_id=event.user_id,
             text=event.message,
