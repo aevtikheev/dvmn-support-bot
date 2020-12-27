@@ -10,7 +10,7 @@ import dialogflow
 
 
 CMD_TELEGRAM_BOT = 'telegram_bot'
-CMD_TRAIN_DIALOGFLOW = 'train_dialogflow'
+CMD_TRAIN_DIALOGFLOW = 'train'
 CMD_VK_BOT = 'vk_bot'
 
 
