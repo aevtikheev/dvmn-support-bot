@@ -9,7 +9,7 @@ from environs import Env
 import dialogflow
 
 
-BOT_TOKEN_ENV_VAR = 'BOT_TOKEN'
+BOT_TOKEN_ENV_VAR = 'TELEGRAM_BOT_TOKEN'
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -26,12 +26,12 @@ def _start_handler(update: Update, context: CallbackContext) -> None:
 
 def _text_handler(update: Update, context: CallbackContext) -> None:
     """Send a message for an arbitrary text."""
-    reply_text = dialogflow.get_reply(
+    response = dialogflow.get_response(
             session_id=update.effective_user.id,
             text=update.message.text,
             language_code=update.effective_user.language_code
         )
-    update.message.reply_text(reply_text)
+    update.message.reply_text(response.text)
 
 
 def run() -> None:

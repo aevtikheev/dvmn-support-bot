@@ -2,3 +2,4 @@ python-telegram-bot==13.1
 environs==9.2.0
 google-cloud-dialogflow==2.0.0
 dataclasses-json==0.5.2
+vk_api==11.9.1

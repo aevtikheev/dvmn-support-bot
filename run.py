@@ -5,11 +5,13 @@ import sys
 import json
 
 import telegram_bot
+import vk_bot
 import dialogflow
 
 
 CMD_TELEGRAM_BOT = 'telegram_bot'
 CMD_TRAIN_DIALOGFLOW = 'train_dialogflow'
+CMD_VK_BOT = 'vk_bot'
 
 
 def parse_args() -> argparse.Namespace:
@@ -17,6 +19,7 @@ def parse_args() -> argparse.Namespace:
     subparsers = parser.add_subparsers(dest='command')
 
     subparsers.add_parser(CMD_TELEGRAM_BOT, help='Run telegram bot')
+    subparsers.add_parser(CMD_VK_BOT, help='Run VK bot')
 
     parser_train_dialogflow = subparsers.add_parser(
         CMD_TRAIN_DIALOGFLOW,
@@ -38,6 +41,8 @@ def main() -> None:
     args = parse_args()
     if args.command == CMD_TELEGRAM_BOT:
         telegram_bot.run()
+    elif args.command == CMD_VK_BOT:
+        vk_bot.run()
     elif args.command == CMD_TRAIN_DIALOGFLOW:
         with args.file as file:
             intents = json.loads(file.read())

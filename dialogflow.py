@@ -35,13 +35,20 @@ class GoogleCreds:
     client_x509_cert_url: str
 
 
+@dataclass
+class Response:
+    """Response from a Dialogflow API."""
+    text: str
+    is_fallback: bool
+
+
 def _get_google_creds() -> GoogleCreds:
     """Get Google application credentials from the GOOGLE_APPLICATION_CREDENTIALS file."""
     with open(env(GOOGLE_APP_CREDS_ENV_VAR), 'r') as google_creds_file:
         return GoogleCreds.from_json(google_creds_file.read())
 
 
-def get_reply(session_id: str, text: str, language_code: str) -> str:
+def get_response(session_id: str, text: str, language_code: str) -> Response:
     """Returns the result of detect intent with text as input."""
     google_creds = _get_google_creds()
 
@@ -61,7 +68,10 @@ def get_reply(session_id: str, text: str, language_code: str) -> str:
         f'Fulfillment text: {response.query_result.fulfillment_text}'
     )
 
-    return response.query_result.fulfillment_text
+    return Response(
+        text=response.query_result.fulfillment_text,
+        is_fallback=response.query_result.intent.is_fallback
+    )
 
 
 def train(intents: list) -> None:
