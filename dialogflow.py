@@ -1,10 +1,11 @@
-"""Common functions to work with Dialogflow API"""
+"""Common functions to work with Dialogflow API."""
 
 import logging
 from dataclasses import dataclass
 
 from environs import Env
 from google.cloud import dialogflow
+from google.api_core.exceptions import GoogleAPIError
 from dataclasses_json import dataclass_json
 
 
@@ -43,8 +44,10 @@ def _get_google_creds() -> GoogleCreds:
 def get_reply(session_id: str, text: str, language_code: str) -> str:
     """Returns the result of detect intent with text as input."""
     google_creds = _get_google_creds()
+
     session_client = dialogflow.SessionsClient()
     session = session_client.session_path(google_creds.project_id, session_id)
+
     logger.info(f'Session {session_id} with language code {language_code}')
 
     text_input = dialogflow.TextInput(text=text, language_code=language_code)
@@ -81,9 +84,17 @@ def train(intents: list) -> None:
             ]
         }
     """
-    # TODO: not tested
+    google_creds = _get_google_creds()
+
     intents_client = dialogflow.IntentsClient()
     agents_client = dialogflow.AgentsClient()
+
     for intent in intents:
-        intents_client.create_intent(parent=GoogleCreds.project_id, intent=intent)
-        agents_client.train_agent(parent=GoogleCreds.project_id)
+        try:
+            intents_client.create_intent(parent=f'projects/{google_creds.project_id}/agent', intent=intent)
+            logger.info(f'Intent "{intent["display_name"]}" created')
+            agents_client.train_agent(parent=f'projects/{google_creds.project_id}')
+            logger.info(f'Intent "{intent["display_name"]}" trained')
+        except GoogleAPIError as exception:
+            logger.error(f'Intent "{intent["display_name"]}" was not created')
+            logger.exception(exception)

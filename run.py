@@ -12,7 +12,7 @@ CMD_TELEGRAM_BOT = 'telegram_bot'
 CMD_TRAIN_DIALOGFLOW = 'train_dialogflow'
 
 
-def parse_args():
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest='command')
 
@@ -34,7 +34,7 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
+def main() -> None:
     args = parse_args()
     if args.command == CMD_TELEGRAM_BOT:
         telegram_bot.run()
