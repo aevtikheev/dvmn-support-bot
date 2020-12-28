@@ -21,3 +21,7 @@ Set environment variables:
 
 * Train the bot with provided phrases. For the format information, check the [example](https://github.com/aevtikheev/dvmn_support_bot/blob/master/intents.json).
     > python run.py train -f intents.json
+
+## Demo
+ * Telegram version of a bot lives here - @ae_dvmn_support_bot
+ * VK version - https://vk.com/club201440450
