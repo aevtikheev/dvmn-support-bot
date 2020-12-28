@@ -1,352 +1,345 @@
 [
-    {
-        "display_name": "Устройство на работу",
-        "messages": [
-            {
-                "text": {
-                    "text": [
-                        "Если вы хотите устроиться к нам, напишите на почту game-of-verbs@gmail.com мини-эссе о себе и прикрепите ваше портфолио."
-                    ]
-                }
-            }
-        ],
-        "training_phrases": [
-            {
-                "parts": [
-                    {
-                        "text": "Как устроиться к вам на работу?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как устроиться к вам?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как работать у вас?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Хочу работать у вас"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Возможно-ли устроиться к вам?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Можно-ли мне поработать у вас?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Хочу работать редактором у вас"
-                    }
-                ]
-            }
+  {
+    "display_name": "Job applications",
+    "messages": [
+      {
+        "text": {
+          "text": [
+            "If you want to work with us, send a mini-essay about yourself to game-of-verbs@gmail.com and attach your portfolio."
+          ]
+        }
+      }
+    ],
+    "training_phrases": [
+      {
+        "parts": [
+          {
+            "text": "How to get a job for you?"
+          }
         ]
-    },
-    {
-        "display_name": "Забыл пароль",
-        "messages": [
-            {
-                "text": {
-                    "text": [
-                        "Если вы не можете войти на сайт, воспользуйтесь кнопкой «Забыли пароль?» под формой входа. Вам на почту прийдёт письмо с дальнейшими инструкциями. Проверьте папку «Спам», иногда письма попадают в неё."
-                    ]
-                }
-            }
-        ],
-        "training_phrases": [
-            {
-                "parts": [
-                    {
-                        "text": "Не помню пароль"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Не могу войти"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Проблемы со входом"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Забыл пароль"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Забыл логин"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Восстановить пароль"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как восстановить пароль"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Неправильный логин или пароль"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Ошибка входа"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Не могу войти в аккаунт"
-                    }
-                ]
-            }
+      },
+      {
+        "parts": [
+          {
+            "text": "How to get a job with you?"
+          }
         ]
-    },
-    {
-        "display_name": "Удаление аккаунта",
-        "messages": [
-            {
-                "text": {
-                    "text": [
-                        "Если вы хотите удалить аккаунт, это можно сделать в вашем профиле в разделе «Настройки». Пролистайте этот раздел до зоны, выделенной красным."
-                    ]
-                }
-            }
-        ],
-        "training_phrases": [
-            {
-                "parts": [
-                    {
-                        "text": "Хочу удалить аккаунт"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Удалить аккаунт"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как удалить аккаунт"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как удалить данные обо мне"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Удалить мои статьи"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Как снести свой аккаунт"
-                    }
-                ]
-            }
+      },
+      {
+        "parts": [
+          {
+            "text": "How to work for you?"
+          }
         ]
-    },
-    {
-        "display_name": "Вопросы от забаненных",
-        "messages": [
-            {
-                "text": {
-                    "text": [
-                        "Если вы забанены, вы нарушили правила нашего сообщества. При входе на сайт вы можете увидеть доказательства ваших нарушений и ссылку на нарушенное правило. Разбан не продаётся. Если вы ознакомились с правилами и доказательствами вашей вины и у вас всё ещё есть претензии — воспользуйтесь формой «Не виновен» под сообщением о бане."
-                    ]
-                }
-            }
-        ],
-        "training_phrases": [
-            {
-                "parts": [
-                    {
-                        "text": "Меня забанили"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Я в бане"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Разбаньте"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Разбаньте моего друга"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Разбаньте меня"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Почему я забанен"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "За что меня забанили"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Можно-ли купить разбан?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Хочу купить разбан"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Мой друг ничего не сделал, а его забанили"
-                    }
-                ]
-            }
+      },
+      {
+        "parts": [
+          {
+            "text": "I want to work for you"
+          }
         ]
-    },
-    {
-        "display_name": "Вопросы от действующих партнёров",
-        "messages": [
-            {
-                "text": {
-                    "text": [
-                        "Простите, в этом чате сидит SMM-отдел, мы не знаем ответа на этот вопрос. Обратитесь напрямую к сотруднику, с которым работаете."
-                    ]
-                }
-            }
-        ],
-        "training_phrases": [
-            {
-                "parts": [
-                    {
-                        "text": "Где проходит совещание"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Когда переведёте деньги по контракту"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Скоро переведу деньги по контракту"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Задерживаемся на совещание"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Высылаю итоги совещания"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Когда подписываем контракт?"
-                    }
-                ]
-            },
-            {
-                "parts": [
-                    {
-                        "text": "Контракт уже в силе?"
-                    }
-                ]
-            }
+      },
+      {
+        "parts": [
+          {
+            "text": "Is it possible to get a job with you?"
+          }
         ]
-    }
+      },
+      {
+        "parts": [
+          {
+            "text": "Can I work for you?"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I want to work as an editor for you"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "display_name": "Forgot password",
+    "messages": [
+      {
+        "text": {
+          "text": [
+            "If you cannot enter the site, use the button\" Forgot your password? \" under the login form. You will receive an email with further instructions. Check the \"Spam\" folder, sometimes letters end up in it. "
+          ]
+        }
+      }
+    ],
+    "training_phrases": [
+      {
+        "parts": [
+          {
+            "text": "I do not remember the password"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I can not enter"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Problems with Login"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Forgot password"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Forgot your username"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Restore password"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "How to recover your password"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Incorrect login or password"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Login failed"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I can't sign in to my account"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "display_name": "Account deleting",
+    "messages": [
+      {
+        "text": {
+          "text": [
+            "If you want to delete your account, you can do this in your profile in the Settings section. Scroll down this section to the area highlighted in red."
+          ]
+        }
+      }
+    ],
+    "training_phrases": [
+      {
+        "parts": [
+          {
+            "text": "I want to delete my account"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Delete account"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "How to delete an account"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "How to delete data about me"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Delete my articles"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "How to demolish your account"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "display_name": "Questions from the banned",
+    "messages": [
+      {
+        "text": {
+          "text": [
+            "If you are banned, you violated the rules of our community. When you enter the site, you can see evidence of your violations and a link to the violated rule. Unban is not for sale. If you have read the rules and evidence of your guilt and you still have claims - please use the \"Not guilty\" form under the message about the ban."
+          ]
+        }
+      }
+    ],
+    "training_phrases": [
+      {
+        "parts": [
+          {
+            "text": "I got banned"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I'm in the ban"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Unban me"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Unban my friend"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Why am I banned"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Why I was banned"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Can I buy an unban?"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I want to buy an unban"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "My friend did nothing, but he was banned"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "display_name": "Questions from existing partners",
+    "messages": [
+      {
+        "text": {
+          "text": [
+            "Sorry, the SMM department is in this chat, we don't know the answer to this question. Please contact the employee you are working with directly."
+          ]
+        }
+      }
+    ],
+    "training_phrases": [
+      {
+        "parts": [
+          {
+            "text": "Where is the meeting"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "When you transfer money under the contract"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I will transfer money under the contract soon"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "We are late for a meeting"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "I am sending the results of the meeting"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "When do we sign the contract?"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "text": "Is the contract already in force?"
+          }
+        ]
+      }
+    ]
+  }
 ]
