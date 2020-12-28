@@ -3,20 +3,15 @@
 import logging
 from dataclasses import dataclass
 
-from environs import Env
 from google.cloud import dialogflow
 from google.api_core.exceptions import GoogleAPIError
 from dataclasses_json import dataclass_json
 
-
-GOOGLE_APP_CREDS_ENV_VAR = 'GOOGLE_APPLICATION_CREDENTIALS'
+from env_settings import env_settings
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-env = Env()
-env.read_env()
+logger = logging.getLogger(__file__)
 
 
 @dataclass_json
@@ -44,7 +39,7 @@ class Response:
 
 def _get_google_creds() -> GoogleCreds:
     """Get Google application credentials from the GOOGLE_APPLICATION_CREDENTIALS file."""
-    with open(env(GOOGLE_APP_CREDS_ENV_VAR), 'r') as google_creds_file:
+    with open(env_settings.google_app_creds_file, 'r') as google_creds_file:
         return GoogleCreds.from_json(google_creds_file.read())
 
 
