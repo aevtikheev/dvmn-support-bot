@@ -60,7 +60,7 @@ def exception_logger(
         raise_: bool = True
 ) -> None:
     """
-    Context manager that catches specified exceptions and logs them with a provided telegram_logger.
+    Context manager that catches specified exceptions and logs them with a provided logger.
 
     :param exceptions: Exceptions to catch.
     :param logger: Logger which will log caught exceptions.
