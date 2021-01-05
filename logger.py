@@ -8,6 +8,39 @@ import telegram
 from env_settings import env_settings
 
 
+LOGGING_CONFIG = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s] [%(pathname)s:%(lineno)d] %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'default': {
+            'level': 'INFO',
+            'formatter': 'standard',
+            'class': 'logging.StreamHandler',
+        },
+        'telegram': {
+            'level': 'INFO',
+            'formatter': 'standard',
+            'class': 'telegram_logger.TelegramLogsHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['default'],
+            'level': 'INFO',
+        },
+        'telegram': {
+            'handlers': ['telegram'],
+            'level': 'INFO',
+        }
+    }
+}
+
+
 class TelegramLogsHandler(logging.Handler):
     """Log handler which sends logs to a specified telegram chat."""
     def __init__(self):
@@ -27,7 +60,7 @@ def exception_logger(
         raise_: bool = True
 ) -> None:
     """
-    Context manager that catches specified exceptions and logs them with a provided logger.
+    Context manager that catches specified exceptions and logs them with a provided telegram_logger.
 
     :param exceptions: Exceptions to catch.
     :param logger: Logger which will log caught exceptions.

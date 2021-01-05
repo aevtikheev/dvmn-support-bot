@@ -1,5 +1,6 @@
 """Entry point to operate with a support bot."""
-
+import logging
+import logging.config
 import argparse
 import sys
 import json
@@ -7,6 +8,7 @@ import json
 import telegram_bot
 import vk_bot
 import dialogflow
+from logger import LOGGING_CONFIG
 
 
 CMD_TELEGRAM_BOT = 'telegram_bot'
@@ -38,15 +40,17 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    logging.config.dictConfig(LOGGING_CONFIG)
+
     args = parse_args()
     if args.command == CMD_TELEGRAM_BOT:
-        telegram_bot.run()
+        telegram_bot.start_bot()
     elif args.command == CMD_VK_BOT:
-        vk_bot.run()
+        vk_bot.start_bot()
     elif args.command == CMD_TRAIN_DIALOGFLOW:
         with args.file as file:
             intents = json.loads(file.read())
-        dialogflow.train(intents)
+        dialogflow.train_agent(intents)
 
 
 if __name__ == '__main__':

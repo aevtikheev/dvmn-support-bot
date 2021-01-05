@@ -7,13 +7,11 @@ from vk_api.longpoll import VkLongPoll, VkEventType, Event
 from vk_api.vk_api import VkApiMethod
 
 import dialogflow
-from logger import TelegramLogsHandler, exception_logger
+from logger import exception_logger
 from env_settings import env_settings
 
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logger = logging.getLogger(__file__)
-logger.addHandler(TelegramLogsHandler())
+telegram_logger = logging.getLogger('telegram')
 
 
 def reply_from_dialogflow(event: Event, api: VkApiMethod) -> None:
@@ -31,13 +29,13 @@ def reply_from_dialogflow(event: Event, api: VkApiMethod) -> None:
         )
 
 
-def run() -> None:
-    """Run VK bot."""
+def start_bot() -> None:
+    """Start VK bot."""
     session = vk_api.VkApi(token=env_settings.vk_bot_token)
     api = session.get_api()
     longpoll = VkLongPoll(session)
 
-    with exception_logger(Exception, logger, raise_=True):
+    with exception_logger(Exception, telegram_logger, raise_=True):
         for event in longpoll.listen():
             if event.type == VkEventType.MESSAGE_NEW and event.to_me:
                 reply_from_dialogflow(event, api)

@@ -10,8 +10,7 @@ from dataclasses_json import dataclass_json
 from env_settings import env_settings
 
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logger = logging.getLogger(__file__)
+logger = logging.getLogger()
 
 
 @dataclass_json
@@ -69,7 +68,7 @@ def get_response(session_id: str, text: str, language_code: str) -> Response:
     )
 
 
-def train(intents: list) -> None:
+def train_agent(intents: list) -> None:
     """
     Trains Dialogflow with provided intents.
 
