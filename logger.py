@@ -22,7 +22,7 @@ LOGGING_CONFIG = {
             'formatter': 'standard',
             'class': 'logging.StreamHandler',
         },
-        'telegram': {
+        'telegram': {  # Logs output to a specified telegram chat.
             'level': 'INFO',
             'formatter': 'standard',
             'class': 'telegram_logger.TelegramLogsHandler',
@@ -33,7 +33,11 @@ LOGGING_CONFIG = {
             'handlers': ['default'],
             'level': 'INFO',
         },
-        'telegram': {
+        'telegram': {  # Logger for a Telegram bot that sends output to the telegram chat
+            'handlers': ['telegram'],
+            'level': 'INFO',
+        },
+        'vk': {  # Logger for a VK bot that sends output to the telegram chat
             'handlers': ['telegram'],
             'level': 'INFO',
         }

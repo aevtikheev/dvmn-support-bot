@@ -10,7 +10,7 @@ import dialogflow
 from logger import exception_logger
 
 
-telegram_logger = logging.getLogger('telegram')
+telegram_logger = logging.getLogger('telegram')  # Sends logs to the telegram chat
 
 
 def start_handler(update: Update, context: CallbackContext) -> None:

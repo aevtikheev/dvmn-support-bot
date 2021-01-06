@@ -11,7 +11,7 @@ from logger import exception_logger
 from env_settings import env_settings
 
 
-vk_logger = logging.getLogger('telegram')
+vk_logger = logging.getLogger('vk')  # Sends logs to the telegram chat
 
 
 def reply_from_dialogflow(event: Event, api: VkApiMethod) -> None:
