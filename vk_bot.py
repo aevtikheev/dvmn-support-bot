@@ -11,7 +11,7 @@ from logger import exception_logger
 from env_settings import env_settings
 
 
-telegram_logger = logging.getLogger('telegram')
+vk_logger = logging.getLogger('telegram')
 
 
 def reply_from_dialogflow(event: Event, api: VkApiMethod) -> None:
@@ -35,7 +35,7 @@ def start_bot() -> None:
     api = session.get_api()
     longpoll = VkLongPoll(session)
 
-    with exception_logger(Exception, telegram_logger, raise_=True):
+    with exception_logger(Exception, vk_logger, raise_=True):
         for event in longpoll.listen():
             if event.type == VkEventType.MESSAGE_NEW and event.to_me:
                 reply_from_dialogflow(event, api)
