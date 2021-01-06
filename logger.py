@@ -25,7 +25,7 @@ LOGGING_CONFIG = {
         'telegram': {  # Logs output to a specified telegram chat.
             'level': 'INFO',
             'formatter': 'standard',
-            'class': 'telegram_logger.TelegramLogsHandler',
+            'class': 'logger.TelegramLogsHandler',
         },
     },
     'loggers': {
@@ -40,7 +40,7 @@ LOGGING_CONFIG = {
         'vk': {  # Logger for a VK bot that sends output to the telegram chat
             'handlers': ['telegram'],
             'level': 'INFO',
-        }
+        },
     }
 }
 
